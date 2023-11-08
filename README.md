@@ -61,7 +61,7 @@ O projeto Syncfy ilustra como a inovação tecnológica pode simplificar process
 
 # Diagrama de Classes
 
-<img src="documentacao/diagrama.jpeg" title="Diagrama de Classes">
+<img src="documentacao/images/UML.jpeg" title="Diagrama de Classes">
 
 <a id="_Rodar_Aplicacao"></a>
 
