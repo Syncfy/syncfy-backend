@@ -8,7 +8,7 @@ A equipe do Syncfy é composta por experientes no desenvolvimento de soluções 
 - Felipe de Lima Santiago - Scrum Master - https://github.com/fehstack
 - Gabriel Tricerri André Niacaris - DBA e UX/UI Designer - https://github.com/gabriel-tricerri
 - Victor Shimada - Desenvolvedor Frontend - https://github.com/shimarrudz
-- Thiago Gyorgy Teixeira de Castro - Desenvolvedor de API's e Desenvolvedor do Sistema Backend - https://github.com/ThiCastroo/
+- Thiago Gyorgy Teixeira de Castro - Desenvolvedor do Sistema Backend - https://github.com/ThiCastroo/
 
 # Sumário
 
