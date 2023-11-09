@@ -1,4 +1,4 @@
-package br.com.system.syncfy.domain.entity.transportavel;
+package br.com.system.syncfy.entity.transportavel;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;

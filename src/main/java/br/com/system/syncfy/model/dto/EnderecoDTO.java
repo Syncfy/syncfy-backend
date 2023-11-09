@@ -1,4 +1,4 @@
-package br.com.system.syncfy.domain.dto;
+package br.com.system.syncfy.model.dto;
 
 import br.com.fiap.Main;
 import br.com.fiap.domain.entity.Endereco;

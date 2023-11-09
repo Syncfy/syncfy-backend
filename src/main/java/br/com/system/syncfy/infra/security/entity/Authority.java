@@ -1,16 +1,22 @@
-package br.com.fiap.infra.security.entity;
-
+package br.com.system.syncfy.infra.security.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "TB_AUTHORITY", uniqueConstraints = {
         @UniqueConstraint(name = "UK_NM_AUTHORITY", columnNames = "NM_AUTHORITY")
 })
-public class Authority {
+public class Authority implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_AUTHORITY")
@@ -18,46 +24,14 @@ public class Authority {
     @Column(name = "ID_AUTHORITY")
     private Long id;
 
-    // ADMIN, USER, LEITURA
     @Column(name = "NM_AUTHORITY", nullable = false)
     private String nome;
 
-
-    //    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST}, mappedBy = "authorities")
-    //    private Set<Usuario> usuarios = new LinkedHashSet<>();
-
-    public Authority() {
-    }
-
-    public Authority(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public Authority setId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Authority setNome(String nome) {
-        this.nome = nome;
-        return this;
-    }
+    @ManyToMany(mappedBy = "authorities", fetch = FetchType.LAZY)
+    private Set<Usuario> usuarios = new LinkedHashSet<>();
 
     @Override
-    public String toString() {
-        return "Authority{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
+    public String getAuthority() {
+        return nome;
     }
 }

@@ -1,6 +1,6 @@
-package br.com.system.syncfy.domain.entity.transportavel;
+package br.com.system.syncfy.entity.transportavel;
 
-import br.com.fiap.infra.security.entity.PessoaFisica;
+import br.com.system.syncfy.infra.security.entity.PessoaFisica;
 import jakarta.persistence.*;
 
 

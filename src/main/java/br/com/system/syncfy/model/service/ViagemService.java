@@ -1,4 +1,4 @@
-package br.com.system.syncfy.domain.service;
+package br.com.system.syncfy.model.service;
 
 import br.com.fiap.domain.entity.Viagem;
 import br.com.fiap.domain.repository.ViagemRepository;

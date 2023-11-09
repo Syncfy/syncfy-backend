@@ -1,10 +1,13 @@
-package br.com.fiap.infra.security.entity;
+package br.com.system.syncfy.infra.security.entity;
+
+import lombok.Data;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 
 import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name = "TB_PESSOA")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -37,61 +40,7 @@ public class Pessoa {
     )
     private Usuario usuario;
 
-
-    protected Pessoa() {
-    }
-
-    protected Pessoa(Long id, String nome, LocalDate nascimento, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.nascimento = nascimento;
-        this.email = email;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Pessoa setId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Pessoa setNome(String nome) {
-        this.nome = nome;
-        return this;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Pessoa setEmail(String email) {
-        this.email = email;
-        return this;
-    }
-
-    public LocalDate getNascimento() {
-        return nascimento;
-    }
-
-    public Pessoa setNascimento(LocalDate nascimento) {
-        this.nascimento = nascimento;
-        return this;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public Pessoa setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-        return this;
-    }
+    // Construtores, getters e setters são automaticamente gerados pelo Lombok
 
     @Override
     public String toString() {

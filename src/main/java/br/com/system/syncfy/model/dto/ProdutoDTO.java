@@ -1,9 +1,8 @@
-package br.com.system.syncfy.domain.dto;
+package br.com.system.syncfy.model.dto;
 
 import br.com.fiap.Main;
 import br.com.fiap.domain.entity.transportavel.Produto;
 import br.com.fiap.domain.service.ProdutoService;
-import jakarta.validation.constraints.NotNull;
 
 import java.util.Objects;
 

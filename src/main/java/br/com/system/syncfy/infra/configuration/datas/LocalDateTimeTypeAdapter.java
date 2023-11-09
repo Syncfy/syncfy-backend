@@ -1,6 +1,6 @@
-package br.com.fiap.infra.configuration.datas;
+package br.com.system.syncfy.infra.configuration.datas;
 
-import com.google.gson.*;
+import com.fasterxml.jackson.databind.JsonSerializer;
 
 import java.lang.reflect.Type;
 import java.time.LocalDateTime;

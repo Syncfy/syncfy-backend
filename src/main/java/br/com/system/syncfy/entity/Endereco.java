@@ -1,4 +1,4 @@
-package br.com.system.syncfy.domain.entity;
+package br.com.system.syncfy.entity;
 
 import br.com.fiap.infra.security.entity.Pessoa;
 import jakarta.persistence.*;

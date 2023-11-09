@@ -1,10 +1,10 @@
-package br.com.fiap.infra.security.dto;
+package br.com.system.syncfy.infra.security.dto;
 
-import br.com.fiap.Main;
-import br.com.fiap.infra.configuration.criptografia.Password;
-import br.com.fiap.infra.security.entity.PessoaJuridica;
-import br.com.fiap.infra.security.entity.Usuario;
-import br.com.fiap.infra.security.service.PessoaJuridicaService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.infra.configuration.criptografia.PasswordEncoder;
+import br.com.system.syncfy.infra.security.entity.PessoaJuridica;
+import br.com.system.syncfy.infra.security.entity.Usuario;
+import br.com.system.syncfy.infra.security.service.PessoaJuridicaService;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
@@ -21,32 +21,33 @@ public record NewPessoaJuridicaDTO(
         CredenciaisDTO credenciais
 ) {
 
-    private static PessoaJuridicaService service = PessoaJuridicaService.of( Main.PERSISTENCE_UNIT );
+    private static PessoaJuridicaService service = PessoaJuridicaService.of(Main.PERSISTENCE_UNIT);
+    private final PasswordEncoder passwordEncoder;
 
     public static NewPessoaJuridicaDTO of(PessoaJuridica p) {
-        if (Objects.isNull( p ) ) return null;
-        return new NewPessoaJuridicaDTO( p.getId(), p.getNome(), p.getNascimento(), p.getEmail(),   p.getCnpj(), null );
+        if (Objects.isNull(p)) return null;
+        return new NewPessoaJuridicaDTO(p.getId(), p.getNome(), p.getNascimento(), p.getEmail(), p.getCnpj(), null);
     }
 
     public static PessoaJuridica of(NewPessoaJuridicaDTO p) {
         PessoaJuridica pessoa = null;
 
-        if (Objects.isNull( p )) return null;
+        if (Objects.isNull(p)) return null;
 
-        if (Objects.nonNull( p.id )) {
-            pessoa = service.findById( p.id() );
+        if (Objects.nonNull(p.id)) {
+            pessoa = service.findById(p.id());
             return pessoa;
         }
         pessoa = new PessoaJuridica();
-        pessoa.setCnpj( p.cnpj );
-        pessoa.setNome( p.nome );
-        pessoa.setNascimento( p.nascimento );
-        pessoa.setEmail( p.email );
+        pessoa.setCnpj(p.cnpj);
+        pessoa.setNome(p.nome);
+        pessoa.setNascimento(p.nascimento);
+        pessoa.setEmail(p.email);
 
-        if(Objects.nonNull( p.credenciais ) ){
+        if (Objects.nonNull(p.credenciais)) {
             Usuario usuario = new Usuario();
-            usuario.setUsername( p.credenciais.username() ).setPassword( Password.encoder(  p.credenciais.password()) );
-            pessoa.setUsuario( usuario );
+            usuario.setUsername(p.credenciais.username()).setPassword(passwordEncoder.encode(p.credenciais.password()));
+            pessoa.setUsuario(usuario);
         }
 
         return pessoa;

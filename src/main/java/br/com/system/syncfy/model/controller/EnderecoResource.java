@@ -1,10 +1,10 @@
-package br.com.fiap.domain.resources;
+package br.com.system.syncfy.model.controller;
 
 
-import br.com.fiap.Main;
-import br.com.fiap.domain.dto.EnderecoDTO;
-import br.com.fiap.domain.entity.Endereco;
-import br.com.fiap.domain.service.EnderecoService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.model.dto.EnderecoDTO;
+import br.com.system.syncfy.entity.Endereco;
+import br.com.system.syncfy.model.service.EnderecoService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
 
