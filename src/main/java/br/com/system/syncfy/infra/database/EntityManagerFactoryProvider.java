@@ -1,7 +1,7 @@
-package br.com.fiap.infra.database;
+package br.com.system.syncfy.infra.database;
 
 
-import br.com.fiap.Main;
+import br.com.system.syncfy.Main;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import org.glassfish.hk2.api.Factory;

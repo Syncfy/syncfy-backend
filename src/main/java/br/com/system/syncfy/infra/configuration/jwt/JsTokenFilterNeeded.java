@@ -1,4 +1,4 @@
-package br.com.fiap.infra.configuration.jwt;
+package br.com.system.syncfy.infra.configuration.jwt;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;

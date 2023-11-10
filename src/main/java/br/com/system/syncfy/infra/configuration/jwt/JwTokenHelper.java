@@ -1,6 +1,6 @@
-package br.com.fiap.infra.configuration.jwt;
+package br.com.system.syncfy.infra.configuration.jwt;
 
-import br.com.fiap.infra.security.entity.Usuario;
+import br.com.system.syncfy.infra.security.entity.Usuario;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;

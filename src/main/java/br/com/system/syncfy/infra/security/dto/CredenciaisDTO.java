@@ -1,4 +1,4 @@
-package br.com.fiap.infra.security.dto;
+package br.com.system.syncfy.infra.security.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

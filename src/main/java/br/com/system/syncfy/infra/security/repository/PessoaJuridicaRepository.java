@@ -1,7 +1,7 @@
-package br.com.fiap.infra.security.repository;
+package br.com.system.syncfy.infra.security.repository;
 
-import br.com.fiap.infra.security.entity.Authority;
-import br.com.fiap.infra.security.entity.PessoaJuridica;
+import br.com.system.syncfy.infra.security.entity.Authority;
+import br.com.system.syncfy.infra.security.entity.PessoaJuridica;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 

@@ -1,8 +1,8 @@
-package br.com.fiap.infra.security.service;
+package br.com.system.syncfy.infra.security.service;
 
-import br.com.fiap.infra.database.EntityManagerFactoryProvider;
-import br.com.fiap.infra.security.entity.PessoaFisica;
-import br.com.fiap.infra.security.repository.PessoaFisicaRepository;
+import br.com.system.syncfy.infra.database.EntityManagerFactoryProvider;
+import br.com.system.syncfy.infra.security.entity.PessoaFisica;
+import br.com.system.syncfy.infra.security.repository.PessoaFisicaRepository;
 import jakarta.persistence.EntityManagerFactory;
 
 import java.util.List;

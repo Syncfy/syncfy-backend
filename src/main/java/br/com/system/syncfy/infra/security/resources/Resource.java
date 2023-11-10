@@ -1,4 +1,4 @@
-package br.com.fiap.infra.security.resources;
+package br.com.system.syncfy.infra.security.resources;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;

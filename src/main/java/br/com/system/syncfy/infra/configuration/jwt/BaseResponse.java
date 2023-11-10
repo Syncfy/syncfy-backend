@@ -1,4 +1,4 @@
-package br.com.fiap.infra.configuration.jwt;
+package br.com.system.syncfy.infra.configuration.jwt;
 
 public class BaseResponse {
 

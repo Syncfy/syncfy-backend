@@ -1,7 +1,7 @@
-package br.com.fiap.infra.security.dto;
+package br.com.system.syncfy.infra.security.dto;
 
-import br.com.fiap.infra.security.entity.Authority;
-import br.com.fiap.infra.security.entity.Usuario;
+import br.com.system.syncfy.infra.security.entity.Authority;
+import br.com.system.syncfy.infra.security.entity.Usuario;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 

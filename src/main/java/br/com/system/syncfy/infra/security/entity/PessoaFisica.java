@@ -1,4 +1,4 @@
-package br.com.fiap.infra.security.entity;
+package br.com.system.syncfy.infra.security.entity;
 
 
 import jakarta.persistence.*;

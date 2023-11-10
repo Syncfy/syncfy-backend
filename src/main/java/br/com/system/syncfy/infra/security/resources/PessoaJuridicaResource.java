@@ -1,9 +1,9 @@
-package br.com.fiap.infra.security.resources;
+package br.com.system.syncfy.infra.security.resources;
 
-import br.com.fiap.Main;
-import br.com.fiap.infra.security.dto.NewPessoaJuridicaDTO;
-import br.com.fiap.infra.security.entity.PessoaJuridica;
-import br.com.fiap.infra.security.service.PessoaJuridicaService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.infra.security.dto.NewPessoaJuridicaDTO;
+import br.com.system.syncfy.infra.security.entity.PessoaJuridica;
+import br.com.system.syncfy.infra.security.service.PessoaJuridicaService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
 

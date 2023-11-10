@@ -1,11 +1,11 @@
-package br.com.fiap.infra.security.dto;
+package br.com.system.syncfy.infra.security.dto;
 
-import br.com.fiap.Main;
-import br.com.fiap.infra.security.entity.Pessoa;
-import br.com.fiap.infra.security.entity.PessoaFisica;
-import br.com.fiap.infra.security.entity.PessoaJuridica;
-import br.com.fiap.infra.security.service.PessoaFisicaService;
-import br.com.fiap.infra.security.service.PessoaJuridicaService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.infra.security.entity.Pessoa;
+import br.com.system.syncfy.infra.security.entity.PessoaFisica;
+import br.com.system.syncfy.infra.security.entity.PessoaJuridica;
+import br.com.system.syncfy.infra.security.service.PessoaFisicaService;
+import br.com.system.syncfy.infra.security.service.PessoaJuridicaService;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.PastOrPresent;
 

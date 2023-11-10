@@ -1,10 +1,10 @@
-package br.com.fiap;
+package br.com.system.syncfy;
 
 
-import br.com.fiap.infra.configuration.cors.CORSFilter;
-import br.com.fiap.infra.configuration.jwt.JsTokenFilterNeeded;
-import br.com.fiap.infra.database.EntityManagerFactoryProvider;
-import br.com.fiap.infra.database.EntityManagerProvider;
+import br.com.system.syncfy.infra.configuration.cors.CORSFilter;
+import br.com.system.syncfy.infra.configuration.jwt.JsTokenFilterNeeded;
+import br.com.system.syncfy.infra.database.EntityManagerFactoryProvider;
+import br.com.system.syncfy.infra.database.EntityManagerProvider;
 import jakarta.inject.Singleton;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -20,9 +20,9 @@ import java.net.URI;
 
 public class Main {
 
-    public static final String BASE_URI = "http://localhost/syncfy/";
+    public static final String BASE_URI = "http://localhost/api/";
 
-    public static final String PERSISTENCE_UNIT = "oracle-matheus";
+    public static final String PERSISTENCE_UNIT = "maria-db";
 
     @PersistenceContext
     static EntityManager manager;
@@ -54,14 +54,14 @@ public class Main {
                 ).register(EntityManagerFactoryProvider.of(PERSISTENCE_UNIT).provide())
 
 
-                .packages("br.com.fiap.domain.resources", "br.com.fiap.infra.security.resources");
+                .packages("br.com.system.syncfy.domain.resources", "br.com.system.syncfy.infra.security.resources");
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
 
 
     public static void main(String[] args) {
         final HttpServer server = startServer();
-        System.out.printf("Syncfy started with endpoints /test as %s%nHit Ctrl-C to stop it....%n", BASE_URI);
+        System.out.printf("App Viagem Benezinho 🤓👍 started with endpoints /available as %s%nHit Ctrl-C to stop it....%n", BASE_URI + "hello");
         try {
             System.in.read();
             server.stop();

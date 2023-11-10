@@ -1,4 +1,4 @@
-package br.com.fiap.infra.database;
+package br.com.system.syncfy.infra.database;
 
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;

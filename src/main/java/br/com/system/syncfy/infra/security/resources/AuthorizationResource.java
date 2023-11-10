@@ -1,12 +1,12 @@
-package br.com.fiap.infra.security.resources;
+package br.com.system.syncfy.infra.security.resources;
 
 
-import br.com.fiap.Main;
-import br.com.fiap.infra.configuration.jwt.JwTokenHelper;
-import br.com.fiap.infra.security.dto.CredenciaisDTO;
-import br.com.fiap.infra.security.dto.UsuarioDTO;
-import br.com.fiap.infra.security.entity.Usuario;
-import br.com.fiap.infra.security.service.UsuarioService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.infra.configuration.jwt.JwTokenHelper;
+import br.com.system.syncfy.infra.security.dto.CredenciaisDTO;
+import br.com.system.syncfy.infra.security.dto.UsuarioDTO;
+import br.com.system.syncfy.infra.security.entity.Usuario;
+import br.com.system.syncfy.infra.security.service.UsuarioService;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;

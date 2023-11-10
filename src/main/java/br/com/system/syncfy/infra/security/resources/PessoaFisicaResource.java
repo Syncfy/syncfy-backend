@@ -1,10 +1,10 @@
-package br.com.fiap.infra.security.resources;
+package br.com.system.syncfy.infra.security.resources;
 
-import br.com.fiap.Main;
-import br.com.fiap.infra.security.dto.NewPessoaFisicaDTO;
-import br.com.fiap.infra.security.dto.PessoaFisicaDTO;
-import br.com.fiap.infra.security.entity.PessoaFisica;
-import br.com.fiap.infra.security.service.PessoaFisicaService;
+import br.com.system.syncfy.Main;
+import br.com.system.syncfy.infra.security.dto.NewPessoaFisicaDTO;
+import br.com.system.syncfy.infra.security.dto.PessoaFisicaDTO;
+import br.com.system.syncfy.infra.security.entity.PessoaFisica;
+import br.com.system.syncfy.infra.security.service.PessoaFisicaService;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;

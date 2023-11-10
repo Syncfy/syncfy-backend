@@ -1,4 +1,4 @@
-package br.com.fiap.infra.security.repository;
+package br.com.system.syncfy.infra.security.repository;
 
 import org.jvnet.hk2.annotations.Contract;
 
