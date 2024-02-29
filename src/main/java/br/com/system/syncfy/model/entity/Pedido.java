@@ -21,15 +21,15 @@ public class Pedido {
     @SequenceGenerator(name = "SQ_PEDIDO", sequenceName = "SQ_PEDIDO", allocationSize = 1, initialValue = 1)
     @Column(name = "COD_PEDIDO")
     private Long codPedido;
-    @Column(name = "DATA_CRIACAO_PEDIDO", nullable = false)
+    @Column(name = "DATA_CRIACAO_PEDIDO")
     private LocalDate dataCriacao;
     @Column(name = "DATA_ATUALIZACAO_PEDIDO")
     private LocalDate dataAtualizacao;
-    @Column(name = "PRECO_TOTAL_PEDIDO", nullable = false)
+    @Column(name = "PRECO_TOTAL_PEDIDO")
     private BigDecimal precoTotal;
-    @Column(name = "DATA_ENTREGA_PEDIDO", nullable = false)
+    @Column(name = "DATA_ENTREGA_PEDIDO")
     private LocalDate dataEntrega;
-    @Column(name = "NUMERO_PEDIDO", nullable = false)
+    @Column(name = "NUMERO_PEDIDO")
     private Long numeroPedido;
     @Column(name = "DESCRICAO_PEDIDO")
     private String descricao;
@@ -201,7 +201,6 @@ public class Pedido {
                 '}';
     }
     public void atualizar(PedidoDTO dados) {
-        this.setCodPedido(dados.numeroPedido());
         this.setDataCriacao(dados.dataCriacao());
         this.setDataAtualizacao(dados.dataAtualizacao());
         this.setPrecoTotal(dados.precoTotal());
@@ -211,7 +210,6 @@ public class Pedido {
     }
 
     public void excluir() {
-        this.setCodPedido(null);
         this.setDataCriacao(null);
         this.setDataAtualizacao(null);
         this.setPrecoTotal(null);

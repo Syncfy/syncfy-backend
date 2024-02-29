@@ -3,6 +3,7 @@ package br.com.system.syncfy.controller;
 import br.com.system.syncfy.model.dto.PedidoDTO;
 import br.com.system.syncfy.model.dto.NewPedidoDTO;
 import br.com.system.syncfy.model.entity.Pedido;
+import br.com.system.syncfy.model.entity.pessoa.PessoaJuridica;
 import br.com.system.syncfy.model.repository.PedidoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,18 +66,10 @@ public class PedidoController {
     }
 
     @DeleteMapping("/{id}")
-    @Transactional
-    public ResponseEntity<Void> excluir(@PathVariable Long id) {
-        Optional<Pedido> pedidoOptional = pedidoRepository.findById(id);
-
-        if (pedidoOptional.isPresent()) {
-            Pedido pedido = pedidoOptional.get();
-            pedido.excluir();
-            pedidoRepository.delete(pedido);
-
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    @jakarta.transaction.Transactional
+    public void excluir(@PathVariable Long id) {
+        Pedido pedido = new Pedido();
+        pedido = pedidoRepository.getReferenceById(id);
+        pedido.excluir();
     }
 }
