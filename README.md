@@ -4,11 +4,11 @@
 
 A equipe do Syncfy é composta por experientes no desenvolvimento de soluções B2B. Nossos membros incluem:
 
-- Matheus Ramos de Pierro - Arquiteto e Dev Backend - https://github.com/matheusPierro/
+- Matheus Ramos de Pierro - Arquiteto e Dev FullStack - https://github.com/matheusPierro/
 - Felipe de Lima Santiago - Scrum Master - https://github.com/fehstack
-- Gabriel Tricerri André Niacaris - DBA e UX/UI Designer - https://github.com/gabriel-tricerri
-- Victor Shimada - Desenvolvedor Frontend - https://github.com/shimarrudz
-- Thiago Gyorgy Teixeira de Castro - Dev Backend - https://github.com/ThiCastroo/
+- Gabriel Tricerri André Niacaris - Dev FullStack - https://github.com/gabriel-tricerri
+- Victor Shimada - Desenvolvedor Mobile - https://github.com/shimarrudz
+- Thiago Gyorgy Teixeira de Castro - Dev FullStack - https://github.com/ThiCastroo/
 
 # Sumário
 
@@ -107,7 +107,7 @@ O projeto Syncfy ilustra como a inovação tecnológica pode simplificar process
 
 <a id="_der_"></a>
 
-# Diagrama de Entidades e Relacionamentos 
+# Diagrama de Entidades e Relacionamentos
 
 <img src="./documentacao/Enterprise%20Application%20Development/ML_Syncfy.png" title="Fluxograma da Arquitetura do Sistema">
 
@@ -149,14 +149,11 @@ p.s. é necessário ter a jdk versão 17 instalada em sua máquina ou podem acon
 <a id="_endpoints"></a>
 
 ### Endpoints para testar a aplicação rodando:
-Dentro da pasta ./documentacao/Enterprise Application Development/postman existe uma collection com 5 apis formando um crud completo para Company e utilizando paginação simples para testes(não precisamos usar sort ou limite de tamanho)
 
-###Link para tabela de Apis da plataforma que estamos construindo:
-https://www.notion.so/Get-Consultar-Pedido-b6ee3218f30a4e0bb1ea9bd061b92cc2?pvs=4
+Dentro da pasta ./documentacao/Enterprise Application Development/postman existe uma collection com 5 apis formando um crud completo para Company e utilizando paginação simples para testes(não precisamos usar sort ou limite de tamanho)
 
 <a id="_pitch"></a>
 
 ## Para mais detalhes assista ao nosso Picth:
 
 [![Alt text](https://img.youtube.com/vi/iyOTlpfnWXU/0.jpg)](https://www.youtube.com/watch?v=iyOTlpfnWXU)
-
