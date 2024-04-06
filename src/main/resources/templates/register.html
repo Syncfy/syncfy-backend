@@ -134,54 +134,77 @@
 </script>
 <script>
     document.getElementById('signupForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var jsonData = {
-            "cnpj": document.getElementById('cnpj').value,
-            "email": document.getElementById('email').value,
-            "softDelete": false,
-            "usuario": {
-                "nome": document.getElementById('usuario_nome').value,
-                "senha": document.getElementById('senha').value
-            },
-            "nome": document.getElementById('nome').value,
-            "tipo": document.getElementById('tipo').value,
-            "segmento": {
-                "nome": document.getElementById('segmento_nome').value
-            },
-            "endereco": {
-                "cep": document.getElementById('endereco_cep').value,
-                "logradouro": document.getElementById('endereco_logradouro').value,
-                "numero": document.getElementById('endereco_numero').value,
-                "complemento": document.getElementById('endereco_complemento').value,
-                "bairro": {
-                    "nome": document.getElementById('endereco_bairro_nome').value,
-                    "cidade": {
-                        "nome": document.getElementById('endereco_bairro_cidade_nome').value,
-                        "codIbge": document.getElementById('endereco_bairro_cidade_codIbge').value,
-                        "estado": {
-                            "nome": document.getElementById('endereco_bairro_cidade_estado_nome').value,
-                            "pais": {
-                                "nome": document.getElementById('endereco_bairro_cidade_estado_pais_nome').value
-                            }
-                        }
-                    }
-                }
-            }
-        };
+     event.preventDefault();
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/company');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                console.log('Requisição bem sucedida');
-            } else {
-                console.error('Erro na requisição');
-            }
-             xhr.close();
-        };
-        xhr.send(JSON.stringify(jsonData));
-    });
+
+     var cnpj = document.getElementById('cnpj').value;
+     var email = document.getElementById('email').value;
+     var usuarioNome = document.getElementById('usuario_nome').value;
+     var senha = document.getElementById('senha').value;
+     var nomeEmpresa = document.getElementById('nome').value;
+     var tipo = document.getElementById('tipo').value;
+     var segmentoNome = document.getElementById('segmento_nome').value;
+     var enderecoCep = document.getElementById('endereco_cep').value;
+     var enderecoLogradouro = document.getElementById('endereco_logradouro').value;
+     var enderecoNumero = document.getElementById('endereco_numero').value;
+     var enderecoComplemento = document.getElementById('endereco_complemento').value;
+     var enderecoBairroNome = document.getElementById('endereco_bairro_nome').value;
+     var enderecoBairroCidadeNome = document.getElementById('endereco_bairro_cidade_nome').value;
+     var enderecoBairroCidadeCodIbge = document.getElementById('endereco_bairro_cidade_codIbge').value;
+     var enderecoBairroCidadeEstadoNome = document.getElementById('endereco_bairro_cidade_estado_nome').value;
+
+     // Cria o objeto JSON com os dados do formulário
+     var jsonData = {
+         "codPessoa": null,
+         "nome": nomeEmpresa,
+         "email": email,
+         "softDelete": false,
+         "usuario": {
+             "nome": usuarioNome,
+             "senha": senha
+         },
+         "cnpj": cnpj,
+         "tipo": tipo,
+         "segmento": {
+             "nome": segmentoNome
+         },
+         "enderecos": [
+             {
+                 "cep": enderecoCep,
+                 "logradouro": enderecoLogradouro,
+                 "numero": enderecoNumero,
+                 "complemento": enderecoComplemento,
+                 "bairro": {
+                     "nome": enderecoBairroNome,
+                     "cidade": {
+                         "nome": enderecoBairroCidadeNome,
+                         "codIbge": enderecoBairroCidadeCodIbge,
+                         "estado": {
+                             "nome": enderecoBairroCidadeEstadoNome,
+                             "pais": {
+                                 "nome": "Brasil"
+                             }
+                         }
+                     }
+                 }
+             }
+         ]
+     };
+
+
+     var xhr = new XMLHttpRequest();
+     xhr.open('POST', '/company');
+     xhr.setRequestHeader('Content-Type', 'application/json');
+     xhr.onload = function() {
+         if (xhr.status === 200) {
+             console.log('Requisição bem sucedida');
+         } else {
+             console.error('Erro na requisição');
+         }
+     };
+     xhr.send(JSON.stringify(jsonData));
+ });
+
 </script>
 </body>
 </html>
