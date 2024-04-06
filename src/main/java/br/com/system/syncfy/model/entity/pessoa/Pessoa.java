@@ -1,7 +1,5 @@
 package br.com.system.syncfy.model.entity.pessoa;
 
-import br.com.system.syncfy.model.dto.pessoa.PessoaJuridicaDTO;
-import br.com.system.syncfy.model.dto.usuario.NewUsuarioDTO;
 import br.com.system.syncfy.model.entity.endereco.Endereco;
 import br.com.system.syncfy.model.entity.Usuario;
 import jakarta.persistence.*;
@@ -112,6 +110,7 @@ public class Pessoa {
     public void setEnderecos(Set<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
+
 
     @Override
     public String toString() {

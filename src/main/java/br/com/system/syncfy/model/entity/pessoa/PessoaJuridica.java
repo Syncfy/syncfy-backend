@@ -1,7 +1,6 @@
 package br.com.system.syncfy.model.entity.pessoa;
 
-import br.com.system.syncfy.model.dto.pessoa.NewPessoaJuridicaDTO;
-import br.com.system.syncfy.model.dto.pessoa.PessoaJuridicaDTO;
+import br.com.system.syncfy.model.dto.pessoa.AttPessoaJuridicaDTO;
 import br.com.system.syncfy.model.entity.Segmento;
 import br.com.system.syncfy.model.entity.Usuario;
 import br.com.system.syncfy.model.entity.endereco.Endereco;
@@ -85,7 +84,7 @@ public class PessoaJuridica extends Pessoa {
                 "} " + super.toString();
     }
 
-    public void atualizar(PessoaJuridicaDTO dados) {
+    public void atualizar(AttPessoaJuridicaDTO dados) {
         this.setNome(dados.nome());
         this.setEmail(dados.email());
         this.setSoftDelete(dados.softDelete());

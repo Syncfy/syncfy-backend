@@ -1,7 +1,7 @@
 package br.com.system.syncfy.model.dto.pedido;
 
 import br.com.system.syncfy.model.dto.frete.FreteDTO;
-import br.com.system.syncfy.model.dto.pessoa.PessoaJuridicaDTO;
+import br.com.system.syncfy.model.dto.pessoa.AttPessoaJuridicaDTO;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,6 +15,6 @@ public record NewPedidoDTO(
         String descricao,
         BigDecimal precoTotal,
         FreteDTO freteId,
-        PessoaJuridicaDTO pessoaJuridicaId,
+        AttPessoaJuridicaDTO pessoaJuridicaId,
         Set<Long> produtoIds
 ) {}

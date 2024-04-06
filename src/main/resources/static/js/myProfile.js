@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function preencherDadosUsuario(data) {
+    console.log(data);
     document.querySelector('input[name="usuario.nome"]').value = data.nome;
     document.querySelector('input[name="email"]').value = data.email;
     document.querySelector('input[name="cnpj"]').value = data.cnpj;

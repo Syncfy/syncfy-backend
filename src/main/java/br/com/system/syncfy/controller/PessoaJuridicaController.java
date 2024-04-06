@@ -2,6 +2,7 @@ package br.com.system.syncfy.controller;
 
 
 import br.com.system.syncfy.model.dto.pessoa.NewPessoaJuridicaDTO;
+import br.com.system.syncfy.model.dto.pessoa.AttPessoaJuridicaDTO;
 import br.com.system.syncfy.model.dto.pessoa.PessoaJuridicaDTO;
 import br.com.system.syncfy.model.entity.pessoa.PessoaJuridica;
 import br.com.system.syncfy.model.repository.PessoaJuridicaRepository;
@@ -25,8 +26,8 @@ public class PessoaJuridicaController {
     private PessoaJuridicaRepository pessoaJuridicaRepository;
 
     @GetMapping("/all")
-    public Page<PessoaJuridicaDTO> listar(@PageableDefault() Pageable paginacao) {
-        return pessoaJuridicaRepository.findAll(paginacao).map(PessoaJuridicaDTO :: new);
+    public Page<AttPessoaJuridicaDTO> listar(@PageableDefault() Pageable paginacao) {
+        return pessoaJuridicaRepository.findAll(paginacao).map(AttPessoaJuridicaDTO:: new);
     }
 
     @PostMapping
@@ -39,7 +40,7 @@ public class PessoaJuridicaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PessoaJuridicaDTO> obterDadosPaciente(@PathVariable Long id) {
+    public ResponseEntity<PessoaJuridicaDTO> obterDados(@PathVariable Long id) {
         Optional<PessoaJuridica> dadosPessoaJuridicaOptional = pessoaJuridicaRepository.findById(id);
 
         if (dadosPessoaJuridicaOptional.isPresent()) {
@@ -52,7 +53,7 @@ public class PessoaJuridicaController {
 
     @PutMapping
     @Transactional
-    public void atualizar(@RequestBody @Valid PessoaJuridicaDTO dados) {
+    public void atualizar(@RequestBody @Valid AttPessoaJuridicaDTO dados) {
         PessoaJuridica pessoaJuridica = new PessoaJuridica();
         pessoaJuridica = pessoaJuridicaRepository.getReferenceById(dados.codPessoa());
         pessoaJuridica.atualizar(dados);
