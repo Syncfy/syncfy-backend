@@ -29,10 +29,15 @@ public class LoginController {
         Optional<Usuario> usuarioOptional = Optional.ofNullable(usuarioRepository.findByNomeAndSenha(nome, senha));
         if (usuarioOptional.isPresent()) {
             session.setAttribute("usuarioLogado", nome);
+            Long idUsuarioLogado = usuarioOptional.get().getCodUser();
+            System.out.println("ID do usuário logado: " + idUsuarioLogado);
+            model.addAttribute("idUsuarioLogado", idUsuarioLogado.toString());
             return "redirect:/";
         } else {
             model.addAttribute("mensagemErro", "Nome de usuário ou senha incorretos");
             return "login";
         }
+
     }
+
 }
