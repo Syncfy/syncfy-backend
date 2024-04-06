@@ -98,7 +98,7 @@
                         <button class="btn btn-primary profile-button" type="button">Salvar Perfil</button>
                     </div>
                     <div class="col-6 col-md-4 text-center">
-                        <button class="btn btn-danger profile-button" type="button">Excluir Perfil</button>
+                        <button class="btn btn-danger profile-button" type="button" id="deleteButton">Excluir Perfil</button>
                     </div>
                 </div>
             </div>
@@ -108,42 +108,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const idUsuarioLogado = 1
-            //localStorage.getItem('idUsuario');
-            console.log('ID do usuário recuperado:', idUsuarioLogado);
-
-            if (idUsuarioLogado) {
-                fetch(`/company/${idUsuarioLogado}`)
-                    .then(response => response.json())
-                    .then(data => preencherDadosUsuario(data))
-                    .catch(error => console.error('Erro ao obter dados:', error));
-            } else {
-                console.error('ID do usuário não encontrado no Local Storage.');
-            }
-        });
-
-        function preencherDadosUsuario(data) {
-            document.querySelector('input[name="usuario.nome"]').value = data.nome;
-            document.querySelector('input[name="email"]').value = data.email;
-            document.querySelector('input[name="cnpj"]').value = data.cnpj;
-            document.querySelector('input[name="tipo"]').value = data.tipo;
-            document.querySelector('input[name="segmento.nome"]').value = data.segmento.nome;
-            document.querySelector('input[name="cep"]').value = data.cep;
-            document.querySelector('input[name="endereco.logradouro"]').value = data.enderecos.logradouro;
-            document.querySelector('input[name="endereco.numero"]').value = data.enderecos.numero;
-            document.querySelector('input[name="endereco.complemento"]').value = data.enderecos.complemento;
-            document.querySelector('input[name="endereco.bairro.nome"]').value = data.enderecos.bairro;
-            document.querySelector('input[name="endereco.bairro.cidade.nome"]').value = data.enderecos.cidade;
-            document.querySelector('input[name="endereco.bairro.cidade.codIbge"]').value = data.enderecos.codigoIBGE;
-            document.querySelector('input[name="endereco.bairro.cidade.estado.nome"]').value = data.enderecos.estado;
-            document.querySelector('input[name="endereco.bairro.cidade.estado.pais.nome"]').value = data.enderecos.pais;
-        }
-    </script>
-
+    <script th:src="@{/js/myProfile.js}"></script>
 
 </body>
 </html>
