@@ -4,6 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 public record UsuarioDTO(
+        Long codUser,
         @NotBlank(message = "O nome de usuário não pode estar em branco.")
         String usuario
 ) {

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function preencherDadosUsuario(data) {
     console.log(data);
-    document.querySelector('input[name="usuario.nome"]').value = data.usuario.nome;
+    document.querySelector('input[name="usuario.nome"]').value = data.usuario.usuario;
     document.querySelector('input[name="email"]').value = data.email;
     document.querySelector('input[name="cnpj"]').value = data.cnpj;
     document.querySelector('input[name="tipo"]').value = data.tipo;

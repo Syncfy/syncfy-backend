@@ -32,7 +32,7 @@ public record PessoaJuridicaDTO(
                         pessoaJuridica.getNome(),
                         pessoaJuridica.getEmail(),
                         pessoaJuridica.isSoftDelete(),
-                        new UsuarioDTO(pessoaJuridica.getUsuario().getNome()),
+                        new UsuarioDTO(pessoaJuridica.getUsuario().getCodUser(), pessoaJuridica.getUsuario().getNome()),
                         pessoaJuridica.getCnpj(),
                         pessoaJuridica.getTipo(),
                         pessoaJuridica.getSegmento(),
