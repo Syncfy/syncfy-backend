@@ -84,16 +84,6 @@ public class PessoaJuridica extends Pessoa {
                 "} " + super.toString();
     }
 
-    public void atualizar(AttPessoaJuridicaDTO dados) {
-        this.setNome(dados.nome());
-        this.setEmail(dados.email());
-        this.setSoftDelete(dados.softDelete());
-        this.setUsuario(dados.usuario());
-        this.setCnpj(dados.cnpj());
-        this.setTipo(dados.tipo());
-        this.setSegmento(dados.segmento());
-    }
-
     public void excluir() {
         this.setSoftDelete(true);
     }
