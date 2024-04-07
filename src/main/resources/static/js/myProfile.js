@@ -27,14 +27,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    document.getElementById("saveButton").addEventListener("click", function () {
+        const senha = document.getElementById("senha").value;
+        if (senha.trim() === "") {
+            alert("Por favor, coloque sua senha.");
+            return;
+        }
+
+        const dadosAtualizados = {
+            codPessoa: idUsuarioLogado,
+            cnpj: document.getElementById("cnpj").value,
+            email: document.getElementById("email").value,
+            usuario: {
+                codUser: idUsuarioLogado,
+                nome: document.getElementById("usuario_nome").value,
+                senha: senha
+            },
+            nome: document.getElementById("nome").value,
+            tipo: document.getElementById("tipo").value,
+            segmento: {
+                codSegmento: 1,
+                nome: document.getElementById("segmento_nome").value
+            }
+        };
+
+        fetch(`/company/${idUsuarioLogado}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosAtualizados)
+        })
+            .then(response => {
+                if (response.ok) {
+                    alert("Perfil atualizado com sucesso!");
+                } else {
+                    alert("Erro ao atualizar perfil. Por favor, tente novamente mais tarde.");
+                }
+            })
+            .catch(error => console.error('Erro ao atualizar perfil:', error));
+    });
 });
 
 function preencherDadosUsuario(data) {
     console.log(data);
-    document.querySelector('input[name="usuario.nome"]').value = data.usuario.usuario;
-    document.querySelector('input[name="email"]').value = data.email;
-    document.querySelector('input[name="cnpj"]').value = data.cnpj;
-    document.querySelector('input[name="tipo"]').value = data.tipo;
-    document.querySelector('input[name="segmento.nome"]').value = data.segmento.nome;
-    document.querySelector('input[name="nome"]').value = data.nome;
+    document.getElementById("usuario_nome").value = data.usuario.usuario;
+    document.getElementById("email").value = data.email;
+    document.getElementById("cnpj").value = data.cnpj;
+    document.getElementById("tipo").value = data.tipo;
+    document.getElementById("segmento_nome").value = data.segmento.nome;
+    document.getElementById("nome").value = data.nome;
 }

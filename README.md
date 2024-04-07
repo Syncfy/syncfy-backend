@@ -103,7 +103,16 @@ O projeto Syncfy ilustra como a inovação tecnológica pode simplificar process
 
 # Fluxograma da Arquitetura de Recursos do Sistema e Comunicação
 
-<img src="./documentacao/DevOps%20Tools%20e%20Cloud%20Computing/Arquitetura_Recursos_Sistema.jpeg" title="Fluxograma da Arquitetura do Sistema">
+<img src="./documentacao/DevOps%20Tools%20e%20Cloud%20Computing/Sprint3/arquiteturaSolucao.png" title="Fluxograma da Arquitetura do Sistema">
+
+### Descritivo
+
+1. Os usuários acessam nosso aplicativo feito React Native.
+2. Utilizando o Firebase como base de dados para manipulação de dados de acesso e sessão.
+3. Os serviços oferecidos pela Syncfy, incluem Python com Flask para o processo de matching em http requests.
+4. As informações são armazenadas no banco de dados da plataforma Pipefy.
+5. Pipefy é onde nosso backend trabalha além de oferecer uma base de dados consistente.
+6. A mesma fornece dashboards e metricas para melhora continua de serviços.
 
 <a id="_der_"></a>
 
