@@ -1,6 +1,7 @@
 package br.com.system.syncfy.model.entity.endereco;
 
 import br.com.system.syncfy.model.entity.pessoa.Pessoa;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -21,6 +22,7 @@ public class Endereco {
             referencedColumnName = "COD_PESSOA",
             foreignKey = @ForeignKey(name = "FK_ENDERECO_PESSOA")
     )
+    @JsonIgnore
     private Pessoa pessoa;
     @Column(name = "CEP", nullable = false)
     private String cep;

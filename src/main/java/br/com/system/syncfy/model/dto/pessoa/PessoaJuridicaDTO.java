@@ -1,13 +1,12 @@
 package br.com.system.syncfy.model.dto.pessoa;
 
-import br.com.system.syncfy.model.dto.endereco.EnderecoDTO;
+import br.com.system.syncfy.model.dto.usuario.UsuarioDTO;
 import br.com.system.syncfy.model.entity.Segmento;
 import br.com.system.syncfy.model.entity.Usuario;
 import br.com.system.syncfy.model.entity.endereco.Endereco;
 import br.com.system.syncfy.model.entity.pessoa.PessoaJuridica;
 import jakarta.validation.constraints.NotNull;
 
-import java.util.List;
 import java.util.Set;
 
 public record PessoaJuridicaDTO(
@@ -16,28 +15,28 @@ public record PessoaJuridicaDTO(
         @NotNull String email,
         boolean softDelete,
 
-        String nomeUsuario,
+        UsuarioDTO usuario,
 
         String cnpj,
 
         String tipo,
 
         Segmento segmento,
+
         Set<Endereco> enderecos
 
-
 ) {
-        public PessoaJuridicaDTO(PessoaJuridica dadosPessoajuridica) {
+        public PessoaJuridicaDTO(PessoaJuridica pessoaJuridica){
                 this(
-                        dadosPessoajuridica.getCodPessoa(),
-                        dadosPessoajuridica.getNome(),
-                        dadosPessoajuridica.getEmail(),
-                        dadosPessoajuridica.isSoftDelete(),
-                        dadosPessoajuridica.getUsuario().getNome(),
-                        dadosPessoajuridica.getCnpj(),
-                        dadosPessoajuridica.getTipo(),
-                        dadosPessoajuridica.getSegmento(),
-                        dadosPessoajuridica.getEnderecos()
+                        pessoaJuridica.getCodPessoa(),
+                        pessoaJuridica.getNome(),
+                        pessoaJuridica.getEmail(),
+                        pessoaJuridica.isSoftDelete(),
+                        new UsuarioDTO(pessoaJuridica.getUsuario().getNome()),
+                        pessoaJuridica.getCnpj(),
+                        pessoaJuridica.getTipo(),
+                        pessoaJuridica.getSegmento(),
+                        pessoaJuridica.getEnderecos()
                 );
         }
 }

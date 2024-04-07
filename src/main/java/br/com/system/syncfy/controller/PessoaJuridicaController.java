@@ -27,7 +27,7 @@ public class PessoaJuridicaController {
 
     @GetMapping("/all")
     public Page<AttPessoaJuridicaDTO> listar(@PageableDefault() Pageable paginacao) {
-        return pessoaJuridicaRepository.findAll(paginacao).map(AttPessoaJuridicaDTO:: new);
+        return pessoaJuridicaRepository.findAll(paginacao).map(AttPessoaJuridicaDTO::new);
     }
 
     @PostMapping
@@ -51,12 +51,18 @@ public class PessoaJuridicaController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     @Transactional
-    public void atualizar(@RequestBody @Valid AttPessoaJuridicaDTO dados) {
-        PessoaJuridica pessoaJuridica = new PessoaJuridica();
-        pessoaJuridica = pessoaJuridicaRepository.getReferenceById(dados.codPessoa());
-        pessoaJuridica.atualizar(dados);
+    public ResponseEntity<Object> atualizar(@RequestBody @Valid AttPessoaJuridicaDTO dados) {
+        Optional<PessoaJuridica> dadosPessoaJuridicaOptional = pessoaJuridicaRepository.findById(dados.codPessoa());
+        if (dadosPessoaJuridicaOptional.isPresent()) {
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            pessoaJuridica = pessoaJuridicaRepository.getReferenceById(dados.codPessoa());
+            pessoaJuridica.atualizar(dados);
+            return ResponseEntity.ok(new AttPessoaJuridicaDTO(pessoaJuridica));
+        }else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/{id}")
