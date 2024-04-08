@@ -221,7 +221,7 @@ p.s. é necessário ter a jdk versão 17 instalada em sua máquina ou podem acon
 
 ### Endpoints para testar a aplicação rodando:
 
-Dentro da pasta ./documentacao/Enterprise Application Development/postman existe uma collection com 5 apis formando um crud completo para Company e utilizando paginação simples para testes(não precisamos usar sort ou limite de tamanho)
+Dentro da pasta ./documentacao/postman/ existe uma collection com 5 apis formando um crud completo para Company e utilizando paginação simples para testes(não precisamos usar sort ou limite de tamanho)
 
 <a id="_pitch"></a>
 
