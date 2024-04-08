@@ -199,8 +199,8 @@
                 <artifactId>azure-webapp-maven-plugin</artifactId>
                 <version>2.9.0</version>
                 <configuration>
-                    <resourceGroup>spring-boot-syncfy-rg</resourceGroup>
-                    <appName>spring-boot-syncfy</appName>
+                    <resourceGroup>syncfy-rg</resourceGroup>
+                    <appName>syncfy-app-service</appName>
                     <pricingTier>F1</pricingTier>
                     <region>brazilsouth</region>
                     <runtime>
