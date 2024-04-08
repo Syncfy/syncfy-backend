@@ -1,5 +1,9 @@
 # Syncfy - Plataforma de Solicitação e Cotações
 
+## Link para o Vídeo de apresentação do Backend da Plataforma
+
+https://youtu.be/N2igslpiDX8
+
 ## Apresentação da Equipe
 
 A equipe do Syncfy é composta por experientes no desenvolvimento de soluções B2B. Nossos membros incluem:
