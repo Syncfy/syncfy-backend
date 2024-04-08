@@ -4,6 +4,10 @@
 
 https://youtu.be/N2igslpiDX8
 
+## Link para o Vídeo de apresentação do Deploy da plataforma na Azure como App Service
+
+https://fiapcom-my.sharepoint.com/:v:/g/personal/rm96920_fiap_com_br/Ec-aWcQZLNNCtV1xbxdc2HgBdRZSuqF_R5HGF_0JvWassA?e=artaBh
+
 ## Apresentação da Equipe
 
 A equipe do Syncfy é composta por experientes no desenvolvimento de soluções B2B. Nossos membros incluem:
@@ -140,7 +144,61 @@ O projeto Syncfy ilustra como a inovação tecnológica pode simplificar process
 
 # Como rodar a aplicação
 
+Observação: Caso não queira fazer o deploy da aplicação na nuvem e apenas rodar o backend localmente na sua maquina, pule os primeiros passos.
+
 Será necessário seguir os passos abaixo:
+
+### Para o deploy
+
+1. **Dentro do pom.xml fazer as devidas configurações de sua máquina azure**
+
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>2.9.0</version>
+                <configuration>
+                    <resourceGroup>syncfy-rg</resourceGroup>
+                    <appName>syncfy-app-service</appName>
+                    <pricingTier>F1</pricingTier>
+                    <region>brazilsouth</region>
+                    <runtime>
+                        <os>Linux</os>
+                        <webContainer>Java SE</webContainer>
+                        <javaVersion>Java 17</javaVersion>
+                    </runtime>
+                    <deployment>
+                        <resources>
+                            <resource>
+                                <type>jar</type>
+                                <directory>${project.basedir}/target</directory>
+                                <includes>
+                                    <include>*.jar</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </deployment>
+                </configuration>
+            </plugin>
+   
+Se achar interessante, também é possível configurar sua máquina por linha de comando com o comando maven:
+
+mvn com.microsoft.azure:azure-webapp-maven-plugin:2.9.0:config 
+
+2. **Deploy da aplicação através do maven do projeto:**
+
+mvn package azure-webapp:deploy
+
+Ele irá solicitar login na sua conta azure com a sua licença e então fará a criação da máquina em sua conta.
+
+é importante ressaltar a possibilidade de estourar o limite de sessões no banco oracle e então seria necessário configurar novos usuários para a aplicação. Segue a seguir usuarios e senhas para teste:
+
+- Usuario: rm96920 Senha: 080903
+- Usuario: rm97121 Senha: 290603
+- Usuario: rm97097 Senha: 220104
+
+Ponto de atenção: Verifique se o nome de sua máquina já não existe, se não pode acabar dando erro no deploy da aplicação na azure.
+
+### Para rodar a aplicação localmente
 
 1. **Build do projeto**: Através do maven abra o projeto e execute o seguinte comando:
 
