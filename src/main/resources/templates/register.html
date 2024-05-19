@@ -96,6 +96,7 @@
                         <input type="text" name="endereco.bairro.cidade.estado.pais.nome"
                                id="endereco_bairro_cidade_estado_pais_nome" placeholder="País">
                     </div>
+                    <div id="errorMessages" class="text-danger"></div>
                     <div class="submit_btn my-4">
                         <input type="submit" value="Sign Up Now"
                                class="btn btn-lg btn-outline-primary rounded-pill px-5 fw-bold">
@@ -220,6 +221,7 @@
                     console.log('XHR Cadastro Status:', xhrCadastro.status);
                     if (xhrCadastro.status === 201) {
                         console.log('Cadastro realizado com sucesso');
+                        document.getElementById('errorMessages').innerHTML = '';
                     } else {
                         console.error('Erro no cadastro');
                     }
@@ -232,7 +234,8 @@
                 var response = JSON.parse(xhrValidate.responseText);
                 console.log('Response:', response);
                 console.log(xhrValidate.responseText);
-                var errorMessage = response.Erros ? response.Erros.join('\n') : 'Erro teste';
+                var errorMessage = response.erros ? response.erros.join('\n') : 'Erro teste';
+                document.getElementById('errorMessages').innerHTML = errorMessage;
                 console.error(errorMessage)
             } else {
                 console.error('Erro na validação');
