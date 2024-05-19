@@ -13,181 +13,203 @@
 </head>
 
 <body>
-    <div class="container d-flex align-items-center min-vh-100">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/signup.png" alt="image" class="img-fluid">
-            </div>
-            <div class="col-md-6 my-3">
-                <div class="login text-center">
-                    <form id="signupForm">
-                        <div class="form_header mb-4">
-                            <h1 class="fw-bold text-primary mb-0">Sign Up</h1>
-                            <p class="fs-6 text-secondary">Start today, its free!</p>
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-building"></i>
-                            <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" name="email" id="email" placeholder="Email">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-user"></i>
-                            <input type="text" name="usuario.nome" id="usuario_nome" placeholder="Nome do Usuário">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-lock"></i>
-                            <input type="password" name="usuario.senha" id="senha" placeholder="Senha">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-user"></i>
-                            <input type="text" name="nome" id="nome" placeholder="Nome da Empresa">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-user"></i>
-                            <input type="text" name="tipo" id="tipo" placeholder="Tipo">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-building"></i>
-                            <input type="text" name="segmento.nome" id="segmento_nome" placeholder="Nome do Segmento">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.cep" id="endereco_cep" placeholder="CEP">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.logradouro" id="endereco_logradouro"
-                                placeholder="Logradouro">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.numero" id="endereco_numero" placeholder="Número">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.complemento" id="endereco_complemento"
-                                placeholder="Complemento">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.bairro.nome" id="endereco_bairro_nome"
-                                placeholder="Bairro">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.bairro.cidade.nome" id="endereco_bairro_cidade_nome"
-                                placeholder="Cidade">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.bairro.cidade.codIbge" id="endereco_bairro_cidade_codIbge"
-                                placeholder="Código IBGE da Cidade">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.bairro.cidade.estado.nome"
-                                id="endereco_bairro_cidade_estado_nome" placeholder="Estado">
-                        </div>
-                        <div class="input-field rounded-pill w-75 mx-auto">
-                            <i class="fa fa-map-marker"></i>
-                            <input type="text" name="endereco.bairro.cidade.estado.pais.nome"
-                                id="endereco_bairro_cidade_estado_pais_nome" placeholder="País">
-                        </div>
-                        <div class="submit_btn my-4">
-                            <input type="submit" value="Sign Up Now"
-                                class="btn btn-lg btn-outline-primary rounded-pill px-5 fw-bold">
-                        </div>
-                    </form>
-                </div>
+<div class="container d-flex align-items-center min-vh-100">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="images/signup.png" alt="image" class="img-fluid">
+        </div>
+        <div class="col-md-6 my-3">
+            <div class="login text-center">
+                <form id="signupForm">
+                    <div class="form_header mb-4">
+                        <h1 class="fw-bold text-primary mb-0">Sign Up</h1>
+                        <p class="fs-6 text-secondary">Start today, its free!</p>
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-building"></i>
+                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="usuario.nome" id="usuario_nome" placeholder="Nome do Usuário">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" name="usuario.senha" id="senha" placeholder="Senha">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="nome" id="nome" placeholder="Nome da Empresa">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-user"></i>
+                        <input type="text" name="tipo" id="tipo" placeholder="Tipo">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-building"></i>
+                        <input type="text" name="segmento.nome" id="segmento_nome" placeholder="Nome do Segmento">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.cep" id="endereco_cep" placeholder="CEP">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.logradouro" id="endereco_logradouro"
+                               placeholder="Logradouro">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.numero" id="endereco_numero" placeholder="Número">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.complemento" id="endereco_complemento"
+                               placeholder="Complemento">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.bairro.nome" id="endereco_bairro_nome"
+                               placeholder="Bairro">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.bairro.cidade.nome" id="endereco_bairro_cidade_nome"
+                               placeholder="Cidade">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.bairro.cidade.codIbge" id="endereco_bairro_cidade_codIbge"
+                               placeholder="Código IBGE da Cidade">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.bairro.cidade.estado.nome"
+                               id="endereco_bairro_cidade_estado_nome" placeholder="Estado">
+                    </div>
+                    <div class="input-field rounded-pill w-75 mx-auto">
+                        <i class="fa fa-map-marker"></i>
+                        <input type="text" name="endereco.bairro.cidade.estado.pais.nome"
+                               id="endereco_bairro_cidade_estado_pais_nome" placeholder="País">
+                    </div>
+                    <div class="submit_btn my-4">
+                        <input type="submit" value="Sign Up Now"
+                               class="btn btn-lg btn-outline-primary rounded-pill px-5 fw-bold">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="colo-12 col-md-6 my-sm-0 pb-5 text-center mx-auto">
-        <h1 class="fw-bold">One of us?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dicta assumenda dolorum doloremque similique
-            ipsa
-            dolore porro sunt, eos facilis mollitia</p>
-        <a href="signin.html" class="btn btn-lg btn-outline-primary rounded-pill px-5 fw-bold">Sign In</a>
-    </div>
+<div class="colo-12 col-md-6 my-sm-0 pb-5 text-center mx-auto">
+    <h1 class="fw-bold">One of us?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dicta assumenda dolorum doloremque similique
+        ipsa
+        dolore porro sunt, eos facilis mollitia</p>
+    <a href="signin.html" class="btn btn-lg btn-outline-primary rounded-pill px-5 fw-bold">Sign In</a>
+</div>
 
-    <!-- JavaScript libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
-    <!-- JavaScript code -->
-    <script>
-        document.getElementById('endereco_cep').addEventListener('change', function (event) {
-            var cep = event.target.value.replace(/\D/g, '');
-            if (cep.length !== 8) {
-                console.error('CEP inválido');
-                return;
+<!-- JavaScript libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+<!-- JavaScript code -->
+<script>
+    document.getElementById('endereco_cep').addEventListener('change', function (event) {
+        var cep = event.target.value.replace(/\D/g, '');
+        if (cep.length !== 8) {
+            console.error('CEP inválido');
+            return;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://viacep.com.br/ws/' + cep + '/json/');
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var endereco = JSON.parse(xhr.responseText);
+                document.getElementById('endereco_logradouro').value = endereco.logradouro || '';
+                document.getElementById('endereco_complemento').value = endereco.complemento || '';
+                document.getElementById('endereco_bairro_nome').value = endereco.bairro || '';
+                document.getElementById('endereco_bairro_cidade_nome').value = endereco.localidade || '';
+                document.getElementById('endereco_bairro_cidade_codIbge').value = endereco.ibge || '';
+                document.getElementById('endereco_bairro_cidade_estado_nome').value = endereco.uf || '';
+                document.getElementById('endereco_bairro_cidade_estado_pais_nome').value = 'Brasil';
+            } else {
+                console.error('Erro na requisição');
             }
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://viacep.com.br/ws/' + cep + '/json/');
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var endereco = JSON.parse(xhr.responseText);
-                    document.getElementById('endereco_logradouro').value = endereco.logradouro || '';
-                    document.getElementById('endereco_complemento').value = endereco.complemento || '';
-                    document.getElementById('endereco_bairro_nome').value = endereco.bairro || '';
-                    document.getElementById('endereco_bairro_cidade_nome').value = endereco.localidade || '';
-                    document.getElementById('endereco_bairro_cidade_codIbge').value = endereco.ibge || '';
-                    document.getElementById('endereco_bairro_cidade_estado_nome').value = endereco.uf || '';
-                    document.getElementById('endereco_bairro_cidade_estado_pais_nome').value = 'Brasil';
-                } else {
-                    console.error('Erro na requisição');
-                }
-            };
-            xhr.send();
-        });
+        };
+        xhr.send();
+    });
 
-        document.getElementById('signupForm').addEventListener('submit', function (event) {
-            event.preventDefault();
+    document.getElementById('signupForm').addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            var cnpj = document.getElementById('cnpj').value;
-            var email = document.getElementById('email').value;
-            var usuarioNome = document.getElementById('usuario_nome').value;
-            var senha = document.getElementById('senha').value;
-            var nomeEmpresa = document.getElementById('nome').value;
-            var tipo = document.getElementById('tipo').value;
-            var segmentoNome = document.getElementById('segmento_nome').value;
-            var enderecoCep = document.getElementById('endereco_cep').value;
-            var enderecoLogradouro = document.getElementById('endereco_logradouro').value;
-            var enderecoNumero = document.getElementById('endereco_numero').value;
-            var enderecoComplemento = document.getElementById('endereco_complemento').value;
-            var enderecoBairroNome = document.getElementById('endereco_bairro_nome').value;
-            var enderecoBairroCidadeNome = document.getElementById('endereco_bairro_cidade_nome').value;
-            var enderecoBairroCidadeCodIbge = document.getElementById('endereco_bairro_cidade_codIbge').value;
-            var enderecoBairroCidadeEstadoNome = document.getElementById('endereco_bairro_cidade_estado_nome').value;
-            var enderecoBairroCidadeEstadoPaisNome = document.getElementById('endereco_bairro_cidade_estado_pais_nome').value;
-            // Cria o objeto JSON com os dados do formulário
-            var jsonData = {
-                "CNPJ": cnpj,
-                "Email": email,
-                "Usuario": {
-                    "Nome": usuarioNome,
-                    "Senha": senha
-                },
-                "Nome": nomeEmpresa,
-                "Tipo": tipo,
-                "Segmento": {
-                    "Nome": segmentoNome
-                },
-                "Endereco": {
+        var cnpj = document.getElementById('cnpj').value;
+        var email = document.getElementById('email').value;
+        var usuarioNome = document.getElementById('usuario_nome').value;
+        var senha = document.getElementById('senha').value;
+        var nomeEmpresa = document.getElementById('nome').value;
+        var tipo = document.getElementById('tipo').value;
+        var segmentoNome = document.getElementById('segmento_nome').value;
+        var enderecoCep = document.getElementById('endereco_cep').value;
+        var enderecoLogradouro = document.getElementById('endereco_logradouro').value;
+        var enderecoNumero = document.getElementById('endereco_numero').value;
+        var enderecoComplemento = document.getElementById('endereco_complemento').value;
+        var enderecoBairroNome = document.getElementById('endereco_bairro_nome').value;
+        var enderecoBairroCidadeNome = document.getElementById('endereco_bairro_cidade_nome').value;
+        var enderecoBairroCidadeCodIbge = document.getElementById('endereco_bairro_cidade_codIbge').value;
+        var enderecoBairroCidadeEstadoNome = document.getElementById('endereco_bairro_cidade_estado_nome').value;
+        var enderecoBairroCidadeEstadoPaisNome = document.getElementById('endereco_bairro_cidade_estado_pais_nome').value;
+
+        // Cria o objeto JSON com os dados do formulário
+        var jsonData = {
+            "nome": nomeEmpresa,
+            "email": email,
+            "softDelete": false,
+            "usuario": {
+                "nome": usuarioNome,
+                "senha": senha
+            },
+            "cnpj": cnpj,
+            "tipo": tipo,
+            "segmento": {
+                "nome": segmentoNome
+            },
+            "enderecos": [
+                {
                     "cep": enderecoCep,
-                    "Logradouro": enderecoLogradouro,
-                    "Numero": enderecoNumero,
-                    "Complemento": enderecoComplemento,
-                    "Bairro": {
-                        "Nome": enderecoBairroNome,
-                        "Cidade": {
-                            "Nome": enderecoBairroCidadeNome,
-                            "CodIbge": enderecoBairroCidadeCodIbge,
-                            "Estado": {
-                                "Nome": enderecoBairroCidadeEstadoNome,
+                    "logradouro": enderecoLogradouro,
+                    "numero": enderecoNumero,
+                    "complemento": enderecoComplemento,
+                    "bairro": {
+                        "nome": enderecoBairroNome,
+                        "cidade": {
+                            "nome": enderecoBairroCidadeNome,
+                            "codIbge": enderecoBairroCidadeCodIbge,
+                            "estado": {
+                                "nome": enderecoBairroCidadeEstadoNome,
+                                "pais": {
+                                    "nome": enderecoBairroCidadeEstadoPaisNome
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "cep": enderecoCep,
+                    "logradouro": enderecoLogradouro,
+                    "numero": enderecoNumero,
+                    "complemento": enderecoComplemento,
+                    "bairro": {
+                        "nome": enderecoBairroNome,
+                        "cidade": {
+                            "nome": enderecoBairroCidadeNome,
+                            "codIbge": enderecoBairroCidadeCodIbge,
+                            "estado": {
+                                "nome":  enderecoBairroCidadeEstadoNome,
                                 "pais": {
                                     "nome": enderecoBairroCidadeEstadoPaisNome
                                 }
@@ -195,50 +217,52 @@
                         }
                     }
                 }
-            };
+            ]
+        }
 
-            var xhrValidate = new XMLHttpRequest();
-            xhrValidate.open('POST', 'https://localhost:7227/Dados');
-            xhrValidate.setRequestHeader('Content-Type', 'application/json');
-            xhrValidate.onload = function () {
-                console.log('XHR Validate Status:', xhrValidate.status);
-                if (xhrValidate.status === 200) {
-                    console.log('Recebida resposta 200');
-                    var response = JSON.parse(xhrValidate.responseText);
-                    console.log('Response:', response);
 
-                    console.log('Resposta válida, prosseguindo com o cadastro');
-                    var xhrCadastro = new XMLHttpRequest();
-                    xhrCadastro.open('POST', '/company');
-                    xhrCadastro.setRequestHeader('Content-Type', 'application/json');
-                    xhrCadastro.onload = function () {
-                        console.log('XHR Cadastro Status:', xhrCadastro.status);
-                        if (xhrCadastro.status === 200) {
-                            console.log('Cadastro realizado com sucesso');
-                        } else {
-                            console.error('Erro no cadastro');
-                        }
-                    };
-                    xhrCadastro.send(JSON.stringify(jsonData));
-                    Console.log('JSON:', jsonData);
+        var xhrValidate = new XMLHttpRequest();
+        xhrValidate.open('POST', 'https://localhost:7227/Dados');
+        xhrValidate.setRequestHeader('Content-Type', 'application/json');
+        xhrValidate.onload = function () {
+            console.log('XHR Validate Status:', xhrValidate.status);
+            if (xhrValidate.status === 200) {
+                console.log('Recebida resposta 200');
+                var response = JSON.parse(xhrValidate.responseText);
+                console.log('Response:', response);
 
-                } else if (xhrValidate.status === 400) {
-                    console.log('Recebida resposta 400');
-                    var response = JSON.parse(xhrValidate.responseText);
-                    console.log('Response:', response);
-                    console.log(xhrValidate.responseText);
-                    var errorMessage = response.Erros ? response.Erros.join('\n') : 'Erro teste';
-                    console.error(errorMessage)
-                } else {
-                    console.error('Erro na validação');
-                }
-            };
-            xhrValidate.onerror = function () {
-                console.error('Erro na requisição:', xhrValidate.statusText);
-            };
-            xhrValidate.send(JSON.stringify(jsonData));
-        });
-    </script>
+                console.log('Resposta válida, prosseguindo com o cadastro');
+                var xhrCadastro = new XMLHttpRequest();
+                xhrCadastro.open('POST', '/company');
+                xhrCadastro.setRequestHeader('Content-Type', 'application/json');
+                xhrCadastro.onload = function () {
+                    console.log('XHR Cadastro Status:', xhrCadastro.status);
+                    if (xhrCadastro.status === 200) {
+                        console.log('Cadastro realizado com sucesso');
+                    } else {
+                        console.error('Erro no cadastro');
+                    }
+                };
+                xhrCadastro.send(JSON.stringify(jsonData));
+                Console.log('JSON:', jsonData);
+
+            } else if (xhrValidate.status === 400) {
+                console.log('Recebida resposta 400');
+                var response = JSON.parse(xhrValidate.responseText);
+                console.log('Response:', response);
+                console.log(xhrValidate.responseText);
+                var errorMessage = response.Erros ? response.Erros.join('\n') : 'Erro teste';
+                console.error(errorMessage)
+            } else {
+                console.error('Erro na validação');
+            }
+        };
+        xhrValidate.onerror = function () {
+            console.error('Erro na requisição:', xhrValidate.statusText);
+        };
+        xhrValidate.send(JSON.stringify(jsonData));
+    });
+</script>
 </body>
 
 </html>
