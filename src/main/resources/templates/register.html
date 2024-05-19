@@ -197,25 +197,6 @@
                             }
                         }
                     }
-                },
-                {
-                    "cep": enderecoCep,
-                    "logradouro": enderecoLogradouro,
-                    "numero": enderecoNumero,
-                    "complemento": enderecoComplemento,
-                    "bairro": {
-                        "nome": enderecoBairroNome,
-                        "cidade": {
-                            "nome": enderecoBairroCidadeNome,
-                            "codIbge": enderecoBairroCidadeCodIbge,
-                            "estado": {
-                                "nome":  enderecoBairroCidadeEstadoNome,
-                                "pais": {
-                                    "nome": enderecoBairroCidadeEstadoPaisNome
-                                }
-                            }
-                        }
-                    }
                 }
             ]
         }
@@ -237,14 +218,14 @@
                 xhrCadastro.setRequestHeader('Content-Type', 'application/json');
                 xhrCadastro.onload = function () {
                     console.log('XHR Cadastro Status:', xhrCadastro.status);
-                    if (xhrCadastro.status === 200) {
+                    if (xhrCadastro.status === 201) {
                         console.log('Cadastro realizado com sucesso');
                     } else {
                         console.error('Erro no cadastro');
                     }
                 };
                 xhrCadastro.send(JSON.stringify(jsonData));
-                Console.log('JSON:', jsonData);
+
 
             } else if (xhrValidate.status === 400) {
                 console.log('Recebida resposta 400');
