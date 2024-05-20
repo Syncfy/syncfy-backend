@@ -225,7 +225,7 @@ Dentro da pasta ./documentacao/postman/ existe uma collection com 5 apis formand
 
 ## Arquitetura Pipeline
 
-img
+<img src="./documentacao/DevOps%Tools%e%Cloud%Computing/ArquiteturaPipeline.jpg" title="Arquitetura Pipeline">
 
 ### Execução da Pipeline CI/CD no Azure**
 
