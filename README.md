@@ -223,6 +223,47 @@ p.s. é necessário ter a jdk versão 17 instalada em sua máquina ou podem acon
 
 Dentro da pasta ./documentacao/postman/ existe uma collection com 5 apis formando um crud completo para Company e utilizando paginação simples para testes(não precisamos usar sort ou limite de tamanho)
 
+## Arquitetura Pipeline
+
+<img src="./documentacao/DevOps%20Tools%20e%20Cloud%20Computing/ArquiteturaPipeline.jpg" title="Arquitetura Pipeline">
+
+### Execução da Pipeline CI/CD no Azure
+
+#### 1. Acesso ao Azure DevOps:
+
+Acesse o <a href="https://dev.azure.com/SyncfyDevops/">Azure DevOps</a> usando suas credenciais.
+
+#### 2. Seleção da Organização e Projeto:
+
+Na página inicial do Azure DevOps, selecione a sua organização "SyncfyDevops" e o projeto "Syncfy".
+
+#### 3. Acesso à Pipeline:
+
+No menu lateral do projeto, clique em "Pipelines".
+
+Você deve ver a lista de pipelines disponíveis. Localize a pipeline chamada "Syncfy-Maven-CI" e clique nela para acessá-la.
+
+#### 4. Execução da Pipeline:
+
+Na página da pipeline, você deve encontrar um botão "Run" ou "Run pipeline" (dependendo da interface do usuário do Azure DevOps que está sendo usada).
+
+Clique neste botão para iniciar a execução da pipeline.
+
+#### 5. Monitoramento:
+
+Durante a execução da pipeline, você pode monitorar o progresso e verificar os logs para depuração, se necessário.
+
+Após a conclusão da execução, verifique se todas as etapas foram concluídas com sucesso.
+
+#### 6. Acesse a aplicação Web:
+
+Abra um navegador da web e vá para o seguinte endereço: app-syncfy.azurewebsites.net.
+
+Isso deve direcioná-lo para a página inicial da sua aplicação Spring MVC implantada no Azure App Service.
+
+Verifique se a aplicação está funcionando conforme o esperado, realizando algumas operações básicas para garantir que tudo esteja em ordem.
+
+
 <a id="_pitch"></a>
 
 ## Para mais detalhes assista ao nosso Picth:
